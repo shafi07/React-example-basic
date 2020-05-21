@@ -12,8 +12,8 @@ const ModelComponent = ({ className, modalState, setModalState, modalSelectedMov
 				<ModalBody>
 					<MovieImage
 						movieImageUrl={modalSelectedMovie ? modalSelectedMovie.backdrop_path : ""}
-                        movieTitle={modalSelectedMovie ? modalSelectedMovie.title : "No title"}
-                        width = {"100%"}
+						movieTitle={modalSelectedMovie ? modalSelectedMovie.title : "No title"}
+						width={"100%"}
 					/>
 					{modalSelectedMovie ? modalSelectedMovie.overview : ""}
 				</ModalBody>
