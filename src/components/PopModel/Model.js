@@ -1,5 +1,5 @@
 import React from "react";
-import MovieImage from "./movieimage";
+import MovieImage from "../Movieimage/movieimage";
 import { Modal, Button, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
 
 const ModelComponent = ({ className, modalState, setModalState, modalSelectedMovie }) => {

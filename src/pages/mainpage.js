@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { isEmpty } from "lodash";
-import Header from "../components/Header";
-import Movie from "../components/Movie.js";
+import Header from "../components/Header/Header";
+import Movie from "../components/Movie/Movie";
 import API_KEY from "../api.config";
-import ModelComponent from "../components/Model";
+import ModelComponent from "../components/PopModel/Model";
 
 const dataFetcher = async (url, setMovieArr) => {
 	const request = await fetch(url);

@@ -1,6 +1,6 @@
 import React from "react";
-import MovieImage from './movieimage';
-import MovieTitle from './MovieTitle';
+import MovieImage from '../Movieimage/movieimage';
+import MovieTitle from '../Movietitle/MovieTitle';
 
 const Movie = ({ itemMovie, setModalInitialState, setModalSelectedMovie }) => {
 	const { original_title, name, backdrop_path } = itemMovie;
