@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import MovieImage from "./movieimage";
 import { Modal, Button, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
 
