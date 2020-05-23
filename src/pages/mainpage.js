@@ -23,6 +23,11 @@ const Mainpage = () => {
 		console.log(data.results);
 	};
 
+	const movieClickHandler = (itemMovie) => {
+		setModalInitialState(true);
+		setModalSelectedMovie(itemMovie);
+	};
+
 	return (
 		<>
 			<Header title="Movie SA" />
@@ -36,6 +41,7 @@ const Mainpage = () => {
 									setModalInitialState={setModalInitialState}
 									itemMovie={itemMovie}
 									setModalSelectedMovie={setModalSelectedMovie}
+									movieClickHandler={movieClickHandler}
 								/>
 							);
 					  })
