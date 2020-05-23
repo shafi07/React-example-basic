@@ -5,25 +5,23 @@ import Movie from "../components/Movie/Movie";
 import API_KEY from "../api.config";
 import ModelComponent from "../components/PopModel/Model";
 
-const dataFetcher = async (url, setMovieArr) => {
-	const request = await fetch(url);
-	const data = await request.json();
-
-	setMovieArr(data.results);
-	console.log(data.results);
-
-	return data;
-};
-
 const Mainpage = () => {
 	const trendingMoviesUrl = `https://api.themoviedb.org/3/trending/all/day?api_key=${API_KEY}`;
 	const [movieArr, setMovieArr] = useState([]);
-	const [modelSelectedMovie, setModelSelectedMovie] = useState();
+	const [modalSelectedMovie, setModalSelectedMovie] = useState();
 	const [modalInitialState, setModalInitialState] = useState(false);
 
 	useEffect(() => {
 		dataFetcher(trendingMoviesUrl, setMovieArr);
 	},[]);
+
+	const dataFetcher = async () => {
+		const request = await fetch(trendingMoviesUrl);
+		const data = await request.json();
+
+		setMovieArr(data.results);
+		console.log(data.results);
+	};
 
 	return (
 		<>
@@ -37,7 +35,7 @@ const Mainpage = () => {
 									key={index}
 									setModalInitialState={setModalInitialState}
 									itemMovie={itemMovie}
-									setModalSelectedMovie={setModelSelectedMovie}
+									setModalSelectedMovie={setModalSelectedMovie}
 								/>
 							);
 					  })
@@ -46,7 +44,7 @@ const Mainpage = () => {
 			<ModelComponent
 				modalState={modalInitialState}
 				setModalState={setModalInitialState}
-				modalSelectedMovie={modelSelectedMovie}
+				modalSelectedMovie={modalSelectedMovie}
 			/>
 		</>
 	);
