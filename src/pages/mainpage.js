@@ -28,6 +28,8 @@ const Mainpage = () => {
 		setModalSelectedMovie(itemMovie);
 	};
 
+	const toggle = () => setModalInitialState(!modalInitialState);
+
 	return (
 		<>
 			<Header title="Movie SA" />
@@ -47,7 +49,7 @@ const Mainpage = () => {
 			</div>
 			<ModelComponent
 				modalState={modalInitialState}
-				setModalState={setModalInitialState}
+				toggle = {toggle}
 				modalSelectedMovie={modalSelectedMovie}
 			/>
 		</>
