@@ -38,9 +38,7 @@ const Mainpage = () => {
 							return (
 								<Movie
 									key={index}
-									setModalInitialState={setModalInitialState}
 									itemMovie={itemMovie}
-									setModalSelectedMovie={setModalSelectedMovie}
 									movieClickHandler={movieClickHandler}
 								/>
 							);
